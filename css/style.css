@@ -4,45 +4,50 @@
 links in the navigation are in the hover or focus state.*/
 nav a:hover,
 nav a:focus {
-     border: 2px dotted purple;
+  border: 2px dotted purple;
 }
+
 
 /*Write selector/rule property to position the default position for the skip class element*/
 .skip {
-     position: relative;
+  position: relative;
 }
 
 .skip a {
-     position: absolute;
-     top: -65x;
+  position: absolute;
+  top: -65px;
 }
+
 
 /*Write selector/rule property to position the skip class element when it is in focus*/
 .skip a:focus {
-     top: 25 px;
+  top: 25px;
 }
 
 /*Write selector/rule property to style all elements when in focus*/
 *:focus {
-     border: 5px dashed green;
+  border: 5px dashed green;
 }
+
+
 
 /*Write selector/rule property to style the container */
 .container {
-     display: grid;
-     grid-template-columns: repeat(5, 1fr);
-     gap: 13px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 13px;
 }
+
 
 /*Write selector/rule property to add the background image to the first div in the grid and place it in the grid. */
 .container > :first-child {
-     grid-column: 1 / -1;
-     background-image: url("../imagas/header.jpg");
+  grid-column: 1 / -1;
+  background-image: url("../images/header.jpg");
 }
+
 
 /* Steps 6 and 7: Write the selector/rule properties to  place the next five elements in the next
  five rows in the grid. */
-
 .accounts,
 .onlinebanking,
 .security,
@@ -86,7 +91,6 @@ nav a:focus {
   grid-row: 6;
 }
 
-
       /*This will be a lot of rules.... but be strategic and combine selectors*/
 .container > div > img {
   display: block;
@@ -96,7 +100,7 @@ nav a:focus {
 }
 
 
-/* Step 8: Write the selector/rule property to style the .text-block class. */
+ /* Step 8: Write the selector/rule property to style the .text-block class. */
 .text-block {
   justify-self: center;
   align-self: center;
@@ -105,8 +109,14 @@ nav a:focus {
 
 .text-block ul {
   text-align: left;
-}      
+}
 
+
+@media screen and (prefers-reduced-motion: reduce) {
+  .overview {
+    background-attachment: initial;
+  }
+}
 
 /* Add your media query here */
 @media screen and (min-width: 825px) {
@@ -146,15 +156,8 @@ nav a:focus {
   }
 
  /* Step 16:Write the selector/rule property to update the .text-block class */
- .text-block {
-  max-height: 235px;
-  overflow: auto;
-}
-}
-
-@media screen and (prefers-reduced-motion: reduce) {
-  .overview {
-    background-attachment: initial;
+  .text-block {
+    max-height: 235px;
+    overflow: auto;
   }
 }
-
